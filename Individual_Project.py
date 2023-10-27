@@ -5,6 +5,7 @@ import plotly.graph_objects as go
 import numpy as np
 import base64  # Import the base64 module
 import matplotlib.pyplot as plt
+import plotly.express as px
 
 # STANDARD PAGE CONFIGURATIONS
 st.set_page_config(layout='wide')
@@ -1080,7 +1081,7 @@ if selected_page == 'Sales by **Regions**':
 
         #########################################################################################################################################
 
-        st.markdown("#### Analysis of Sales Distribution across Channels (Histogram & Box Plot)")
+        st.markdown("#### Analysis of Sales Distribution across Regions (Histogram & Box Plot)")
 
         # Extract unique values from 'Channel'
         region_categories = df['Region'].unique().tolist()
@@ -1207,7 +1208,7 @@ if selected_page == 'Sales by **Regions**':
 
         st.write('---')
         ############################################################################################################################
-        st.markdown("#### Top Performing Customers in Each Channel")
+        st.markdown("#### Top Performing Customers in Each Region")
 
         # Create columns
         column_1, column_2 = st.columns([0.7, 1.5])
@@ -1235,7 +1236,7 @@ if selected_page == 'Sales by **Regions**':
 
         # SECTION 4 BOTTOM CUSTOMERS
 
-        st.markdown("#### Bottom Performing Customers in Each Channel")
+        st.markdown("#### Bottom Performing Customers in Each Region")
         column_1, column_2 = st.columns([1, 1.5])
 
 
